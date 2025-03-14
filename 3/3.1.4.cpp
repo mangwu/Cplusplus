@@ -21,7 +21,8 @@ int main(void)
   cout << "整型unsigned long long的数字范围" << n_ulong_long_min << "~" << n_ulong_long_max << endl;
 
   // 数值溢出问题，当一个整型变量的数值增加或减少导致溢出了其能表达的数值范围，就会发生上溢或者下溢
-  // 例如short int 范围在
-
+  // 例如unsigned short int 范围在0 - 65535 ，那么在值增加超过65535时就会发生上溢重置为0
+  n_ushort_max = n_ushort_max + 100;
+  cout << n_ushort_max << endl;
   return 0;
 }
