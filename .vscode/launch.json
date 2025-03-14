@@ -13,9 +13,10 @@
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
-      "externalConsole": true, // 是否启动控制台，true 会出现额外的黑窗口， false 则会调用内置终端
+      "externalConsole": false, // 是否启动控制台，true 会出现额外的黑窗口， false 则会调用内置终端
       "MIMode": "gdb",
-      "miDebuggerPath": "D:\\environment\\mingw64\\bin\\gdb.exe",
+      // "miDebuggerPath": "D:\\environment\\mingw64\\bin\\gdb.exe",
+      "miDebuggerPath": "D:\\DevelopmentEnvironment\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
