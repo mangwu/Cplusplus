@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 
 using namespace std;
@@ -17,5 +18,28 @@ int main(void) {
   cout << "bird = " << bird << endl;
   bird = animal;
   cout << "bird = " << bird << endl;
+
+  char *ps; // 未被初始化
+  // cout << "ps =" << ps << endl; // 会报错，使用了未初始化的指针
+
+  cout << "输入animal:" << endl;
+  cin >> animal;
+  cout << "animal = " << animal << endl;
+  cout << "bird = " << bird << endl;
+  // cin >> ps; // 会报错，使用了一个未初始化的指针
+
+  // 打印animal表示的字符地址
+  cout << "animal数组名表示的地址：" << (int *)animal << endl;
+  cout << "bird指针表示的地址：" << (int *)bird << endl;
+
+  ps = animal;
+  cout << "ps = animal; " << ps << " at " << (int *)ps << endl;
+
+  // 让ps指向内存中新字符串空间
+  ps = new char[strlen(animal) + 1];
+  strcpy(ps, animal); // 复制animal的字符串到ps指向的内存字符串空间中
+  cout << "ps at" << (int *)ps << endl; // 新的地址
+
+  delete[] ps; // new开辟内存空间后，一定要释放
   return 0;
 }
