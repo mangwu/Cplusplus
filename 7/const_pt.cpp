@@ -47,5 +47,9 @@ int main(void) {
   const int **pp3;
   int *p3 = &n;
   // pp3 = &p3; // 此条语句错误，因为 **pp3不能修改，但是*p3可以修改
+
+  const int *p4 = &n;
+  pp3 = &p4;  // 这条语句无错误，因为*p4定义了const，*p4不可以修改
+
   return 0;
 }
