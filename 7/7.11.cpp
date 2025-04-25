@@ -23,6 +23,12 @@ int main(void) {
   travel_time trip = travel_time_sum(day1, day2);
   cout << "total: ";
   show_time(trip);
+
+  travel_time day3 = {4, 32};
+  cout << "day3: ";
+  show_time(day3);
+  cout << "Three-day total:" << endl;
+  show_time(travel_time_sum(trip, day3));
   return 0;
 }
 
