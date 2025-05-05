@@ -25,7 +25,7 @@ int main(void) {
 }
 
 void strcount(const char *str) {
-  // 只会在第一个调用函数时被初始化，并且在代码块不处于活动状态时仍然存在
+  // 只会在编译期间被初始化一次，并且在代码块不处于活动状态时仍然存在
   static int total = 0; // 静态局部变量
   int count = 0;        // 自动变量
   cout << "\"" << str << "\" contains ";
